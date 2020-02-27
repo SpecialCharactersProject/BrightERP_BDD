@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BrightERPUtil {
+public class BriteERPUtil {
     public static void waitForVisibility(WebElement element, int seconds) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), seconds);
         wait.until(ExpectedConditions.visibilityOf(element));
