@@ -23,6 +23,9 @@ public class ImportPage {
     @FindBy(xpath = "//a[contains(text(), 'Help')]")
     public WebElement helpButton;
 
+    @FindBy(xpath = "//input[@class='oe_import_file_show form-control']")
+    public WebElement loadFileInputBox;
+
 
 
 }
