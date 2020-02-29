@@ -136,5 +136,34 @@ public class Create_StepDefs {
         Assert.assertTrue(actualTitle.contains(comSearchValue));
     }
 
+    @When("User clicks on discard button")
+    public void user_clicks_on_discard_button() {
+        createPage.discardBtn.click();
+        createPage.alert.click();
+    }
+
+
+    @Then("User should be able to discard the information")
+    public void user_should_be_able_to_discard_the_information() {
+        System.out.println("Test Passed");
+    }
+    @When("user clicks edit button")
+    public void user_clicks_edit_button() {
+        createPage.editBtn.click();
+    }
+
+    @When("user edit what he wants")
+    public void user_edit_what_he_wants() {
+        createPage.contactName.sendKeys(faker.name().username());
+    }
+    @When("User clicks on the save button")
+    public void user_clicks_on_the_save_button() {
+        createPage.saveBtn.click();
+    }
+    @Then("User should be able edit the page")
+    public void user_should_be_able_edit_the_page() {
+        System.out.println("Test Passed");
+    }
+
 
 }
