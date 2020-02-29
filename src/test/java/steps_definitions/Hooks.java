@@ -15,7 +15,6 @@ public class Hooks {
        Driver.getDriver().get("https://www.google.com");
         LoginPage loginPage = new LoginPage();
         loginPage.login();
-
     }
 
 
