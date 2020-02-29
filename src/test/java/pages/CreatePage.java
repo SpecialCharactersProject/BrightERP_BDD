@@ -17,10 +17,10 @@ public class CreatePage {
 
     @FindBy(xpath="//button[@class='btn btn-primary btn-sm o_form_button_save']")
     public WebElement saveBtn;
+
     @FindBy(xpath = "//button[@class = 'btn btn-primary btn-sm o-kanban-button-new btn-default']")
     public WebElement createButton;
-    @FindBy(xpath = "//button[@class = 'btn btn-primary btn-sm o-kanban-button-new btn-default']")
-    public WebElement editCreateButton;
+
     @FindBy(xpath = "//button[@class = 'btn btn-primary btn-sm o-kanban-button-new btn-default']")
     public WebElement indCreateButton;
 

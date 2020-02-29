@@ -6,7 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="BrightERP_Cucumber" />
+        <module name="BriteERP_Cucumber" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="12" />
