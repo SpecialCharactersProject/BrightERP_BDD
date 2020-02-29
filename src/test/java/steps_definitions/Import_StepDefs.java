@@ -6,8 +6,7 @@ import cucumber.api.java.en.When;
 import org.junit.Assert;
 import pages.BasePage;
 import pages.ImportPage;
-import pages.LoginPage;
-import sun.jvm.hotspot.debugger.Page;
+import utilities.BriteERPUtil;
 import utilities.Driver;
 
 import java.awt.*;
@@ -18,29 +17,28 @@ public class Import_StepDefs {
 
     ImportPage importPage = new ImportPage();
 
-    @Given("user is logged into the APP")
-    public void user_is_logged_into_the_APP() {
-        new LoginPage().login();
-    }
-
-    @When("user clicks on the contacts module")
-    public void user_clicks_on_the_contacts_module() {
+    @Given("user is on the contacts module")
+    public void user_is_on_the_contacts_module() {
+        BriteERPUtil.pause(3);
         new BasePage().contactsButton.click();
     }
 
     @When("user verify the import button displays")
     public void user_verify_the_import_button_displays() {
+        BriteERPUtil.pause(3);
         Assert.assertTrue("Import Button did not Display",importPage.importBtn.isDisplayed());
 
     }
 
     @When ("user clicks on the import button")
     public void user_clicks_on_the_import_button() {
+        BriteERPUtil.pause(3);
         importPage.importBtn.click();
     }
 
     @Then("user verify the current page title with the expected title")
     public void user_verify_the_current_page_title_with_the_expected_title() {
+        BriteERPUtil.pause(3);
         String expectedTitle= "Import a File - Odoo";
         Assert.assertTrue(expectedTitle.contains(Driver.getDriver().getTitle()));
 
@@ -51,6 +49,7 @@ public class Import_StepDefs {
 
     @When("user verify the Load File button displays")
     public void user_verify_the_Load_File_button_displays() {
+        BriteERPUtil.pause(3);
         Assert.assertTrue("ImportLoadFile did not Display",importPage.importLoadFile.isDisplayed());
     }
 
