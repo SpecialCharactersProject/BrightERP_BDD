@@ -16,6 +16,7 @@ public class Create_StepDefs {
     CreatePage createPage = new CreatePage();
         Faker faker = new Faker();
         String name;
+
     @Given("BriteERP Contacts Module Page")
     public void briteerp_Contacts_Module_Page() {
         BriteERPUtil.pause(2);
