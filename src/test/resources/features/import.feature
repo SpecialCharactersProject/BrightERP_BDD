@@ -1,4 +1,4 @@
-@ImportFile
+@import
 Feature: Import a File on Contacts Module
 
 

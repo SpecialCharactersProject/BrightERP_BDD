@@ -1,4 +1,4 @@
-@SearchTest
+@search
 Feature: US#SC-208 Using a search box to find contacts of users and the users' companies.
 
 
