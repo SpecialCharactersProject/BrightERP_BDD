@@ -1,3 +1,4 @@
+
 Feature: US#SC-214 Contact creation, editing, discarding workflow for individuals and company
 
 
