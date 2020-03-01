@@ -1,5 +1,4 @@
 package steps_definitions;
-
 import com.github.javafaker.Faker;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
@@ -11,34 +10,26 @@ import org.openqa.selenium.support.ui.Select;
 import pages.CreatePage;
 import utilities.BriteERPUtil;
 import utilities.Driver;
-
 public class Create_StepDefs { CreatePage createPage = new CreatePage();
     Faker faker = new Faker();
     String individualName;
     String companyName;
-
     @Given("BriteERP Contacts Module Page")
     public void briteerp_Contacts_Module_Page() {
         BriteERPUtil.pause(2);
         createPage.contactsModule.click();
-
-
     }
-
     @When("User clicks on create button")
     public void user_clicks_on_create_button() {
         BriteERPUtil.pause(5);
         Assert.assertTrue(" CreateButton verification Failed", createPage.createButton.isDisplayed());
         createPage.createButton.click();
-
     }
-
     @When("User chooses individual option")
     public void user_chooses_individual_option() {
         BriteERPUtil.pause(3);
         createPage.individualRadioBtn.click();
     }
-
     @When("User fills out individual page fields")
     public void user_fills_out_individual_page_fields() {
         individualName = faker.name().firstName() + " " + faker.name().lastName();
@@ -72,38 +63,25 @@ public class Create_StepDefs { CreatePage createPage = new CreatePage();
         BriteERPUtil.pause(1);
         createPage.ContactTitleBox.click();
         createPage.ContactTitleSelection.click();
-
-
     }
-
     @And("User clicks on save button")
     public void user_clicks_on_save_button() {
         BriteERPUtil.pause(3);
         createPage.saveBtn.click();
-
-
     }
-
-
     @Then("User sees {string} individual displayed")
     public void user_sees_individual_displayed(String indSearchValue) {
         indSearchValue = individualName;
-
         BriteERPUtil.pause(3);
         String actualTitle = Driver.getDriver().getTitle();
         Assert.assertTrue(actualTitle.contains(indSearchValue));
     }
-
-
     @When("User chooses company option")
     public void user_chooses_company_option() {
-
         Assert.assertTrue("Individual radio selection by default is FAILED", createPage.individualRadioBtn.isSelected());
         BriteERPUtil.pause(2);
         createPage.companyRadioButton.click();
-
     }
-
     @When("User fills out company  page fields")
     public void user_fills_out_company_page_fields() {
         BriteERPUtil.pause(1);
@@ -121,26 +99,19 @@ public class Create_StepDefs { CreatePage createPage = new CreatePage();
         createPage.contactPhone.sendKeys(faker.phoneNumber().cellPhone());
         createPage.contactEmail.sendKeys("vvvvv@yahoo.com");
         createPage.contactWebsite.sendKeys("www.craxyland.com");
-
-
     }
-
     @Then("User sees {string} company displayed")
     public void user_sees_company_displayed(String comSearchValue) {
         comSearchValue = companyName;
-
         BriteERPUtil.pause(3);
         String actualTitle = Driver.getDriver().getTitle();
         Assert.assertTrue(actualTitle.contains(comSearchValue));
     }
-
     @When("User clicks on discard button")
     public void user_clicks_on_discard_button() {
         createPage.discardBtn.click();
         createPage.alert.click();
     }
-
-
     @Then("User should be able to discard the information")
     public void user_should_be_able_to_discard_the_information() {
         System.out.println("Test Passed");
@@ -149,7 +120,6 @@ public class Create_StepDefs { CreatePage createPage = new CreatePage();
     public void user_clicks_edit_button() {
         createPage.editBtn.click();
     }
-
     @When("user edit what he wants")
     public void user_edit_what_he_wants() {
         createPage.contactName.sendKeys(faker.name().username());
@@ -162,9 +132,4 @@ public class Create_StepDefs { CreatePage createPage = new CreatePage();
     public void user_should_be_able_edit_the_page() {
         System.out.println("Test Passed");
     }
-
-
 }
-
-
-
