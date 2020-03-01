@@ -1,4 +1,4 @@
-@ImportFile
+@import
 
 Feature: Import a File on Contacts Module
   Scenario: Verifying the import button
@@ -12,8 +12,8 @@ Feature: Import a File on Contacts Module
     When user clicks on the import button
     And user verify the Load File button displays
     And user verify the No file chosen… text on the load file input box
-    And user should pass the path of the file on
-    Then user should be able to import file
+    Then user should pass the path of the file on
+
 
 
   Scenario: Validation of the cancel button

@@ -64,13 +64,9 @@ public class Import_StepDefs {
     public void user_should_pass_the_path_of_the_file_on() {
 
         uploadFile("/Users/mikaildurur/Desktop/contacs.xlsx");
-        throw new cucumber.api.PendingException();
-    }
 
-    @Then("user should be able to import file")
-    public void user_should_be_able_to_import_file() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new cucumber.api.PendingException();
+        importPage.loadFileInputBox.sendKeys("contacs.xlsx");
+
     }
 
 

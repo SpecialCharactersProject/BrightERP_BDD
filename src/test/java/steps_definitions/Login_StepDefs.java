@@ -11,8 +11,6 @@ public class Login_StepDefs {
     public void landing_page_of_BriteERP() {
             LoginPage loginPage = new LoginPage();
         loginPage.login();
-
-
     }
 
 
