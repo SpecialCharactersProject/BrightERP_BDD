@@ -10,7 +10,8 @@ import org.openqa.selenium.support.ui.Select;
 import pages.CreatePage;
 import utilities.BriteERPUtil;
 import utilities.Driver;
-public class Create_StepDefs { CreatePage createPage = new CreatePage();
+public class Create_StepDefs {
+    CreatePage createPage = new CreatePage();
     Faker faker = new Faker();
     String individualName;
     String companyName;
@@ -100,18 +101,24 @@ public class Create_StepDefs { CreatePage createPage = new CreatePage();
         createPage.contactEmail.sendKeys("vvvvv@yahoo.com");
         createPage.contactWebsite.sendKeys("www.craxyland.com");
     }
-    @Then("User sees {string} company displayed")
-    public void user_sees_company_displayed(String comSearchValue) {
-        comSearchValue = companyName;
-        BriteERPUtil.pause(3);
-        String actualTitle = Driver.getDriver().getTitle();
-        Assert.assertTrue(actualTitle.contains(comSearchValue));
-    }
+
     @When("User clicks on discard button")
     public void user_clicks_on_discard_button() {
         createPage.discardBtn.click();
         createPage.alert.click();
     }
+
+    @Then("User sees {string}  company displayed")
+    public void user_sees_company_displayed(String comSearchValue) {
+        comSearchValue = companyName;
+        BriteERPUtil.pause(3);
+        String actualTitle = Driver.getDriver().getTitle();
+        Assert.assertTrue(actualTitle.contains(comSearchValue));
+
+    }
+
+
+
     @Then("User should be able to discard the information")
     public void user_should_be_able_to_discard_the_information() {
         System.out.println("Test Passed");
@@ -132,4 +139,45 @@ public class Create_StepDefs { CreatePage createPage = new CreatePage();
     public void user_should_be_able_edit_the_page() {
         System.out.println("Test Passed");
     }
+
+
+
+
+
+
+    //negative
+
+    @When("User fills out individual page fields neg scenario")
+    public void user_fills_out_individual_page_fields_neg_scenario() {
+        createPage.contactAddressStreet.sendKeys(faker.address().streetAddress());
+        createPage.contactAddressCity.sendKeys(faker.address().cityName());
+        createPage.contactAddressZip.sendKeys(faker.address().zipCode());
+        createPage.jobPosition.sendKeys(faker.job().position());
+        createPage.contactPhone.sendKeys(faker.phoneNumber().phoneNumber());
+        createPage.contactEmail.sendKeys("thisIsFakeEmail@cybertek.com");
+    }
+
+    @Then("User should see error message pops up.")
+    public void user_should_see_error_message_pops_up() {
+        Assert.assertTrue("Test FAILED",createPage.errorMessage.isDisplayed());
+        BriteERPUtil.pause(2);
+    }
+
+    @When("User fills out company  page fields neg scenario")
+    public void user_fills_out_company_page_fields_neg_scenario() {
+        createPage.contactAddressStreet.sendKeys(faker.address().streetName());
+        BriteERPUtil.pause(1);
+        createPage.contactAddressCity.sendKeys(faker.address().city());
+        createPage.addressStateBox.click();
+        BriteERPUtil.pause(1);
+        createPage.companyStateSelection.click();
+        BriteERPUtil.pause(1);
+        createPage.contactAddressZip.sendKeys(faker.address().zipCode());
+        createPage.contactPhone.sendKeys(faker.phoneNumber().cellPhone());
+        createPage.contactEmail.sendKeys("vvvvv@yahoo.com");
+        createPage.contactWebsite.sendKeys("www.craxyland.com");
+    }
+
+
+
 }
