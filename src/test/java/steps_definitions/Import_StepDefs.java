@@ -43,8 +43,6 @@ public class Import_StepDefs {
         Assert.assertTrue(expectedTitle.contains(Driver.getDriver().getTitle()));
 
         Assert.assertEquals(expectedTitle,Driver.getDriver().getTitle());
-        //try with current URL
-       // http://app.briteerp.com/web?#model=res.partner&action=import
     }
 
     @When("user verify the Load File button displays")
@@ -62,22 +60,16 @@ public class Import_StepDefs {
     public void user_should_pass_the_path_of_the_file_on() {
 
         uploadFile("/Users/mikaildurur/Desktop/contacs.xlsx");
-        throw new cucumber.api.PendingException();
+        importPage.loadFileInputBox.sendKeys("contacs.xlsx");
+
+        //Assert.assertTrue(importPage.loadFileInputBox.getText().contains("No file chosen..."));
+
     }
-
-    @Then("user should be able to import file")
-    public void user_should_be_able_to_import_file() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new cucumber.api.PendingException();
-    }
-
-
     public static void setClipboardData(String string) {
         //StringSelection is a class that can be used for copy and paste operations.
         StringSelection stringSelection = new StringSelection(string);
         Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
     }
-
     public static void uploadFile(String fileLocation) {
         try {
             //Setting clipboard with file location
@@ -94,6 +86,5 @@ public class Import_StepDefs {
         } catch (Exception exp) {
             exp.printStackTrace();
         }
-
     }
 }
