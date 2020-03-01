@@ -15,9 +15,17 @@ public class SearchPage extends BasePage {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
+    @FindBy(xpath = "(//li/a/span)[4]")
+    public WebElement contactsModule;
 
     @FindBy(xpath = "//input[@class='o_searchview_input']")
     public WebElement searchButton;
+
+    @FindBy(xpath = "//span[@class='o_facet_values_sep']")
+    public WebElement orDisplay;
+
+    @FindBy(xpath = "//span[@class='o_pager_value']")
+    public WebElement num1_80Button;
 
     @FindBy(xpath = "(//div[@class='btn-group o_dropdown']/button)[1]")
     public WebElement filters;
