@@ -1,5 +1,6 @@
-Feature:Log IN and Log OUT
-  @create
-  Scenario: Verification of login fun
-  Given  Landing page of BriteERP
+Feature: Log In and Log Out
+
+  @create @import @search
+  Scenario: Verification of login functionality
+    Given Landing page of BriteERP
 
