@@ -1,27 +1,41 @@
+@create
 Feature: US#SC-214 Contact creation, editing, discarding workflow for individuals and company
 
-
-
-
-  @ind
   Scenario: Contact Creation workflow for individual
     Given BriteERP Contacts Module Page
     When User clicks on create button
     And  User chooses individual option
     And  User fills out individual page fields
     And  User clicks on save button
-    Then User sees "new contact" displayed
+    Then User sees "new contact " individual displayed
 
-
-  @com
   Scenario: Contact Creation workflow for company
     Given BriteERP Contacts Module Page
     When User clicks on create button
     And User chooses company option
     And User fills out company  page fields
     And  User clicks on save button
-    Then User sees "new contact" displayed
+    Then User sees "new contact " company displayed
 
+
+  Scenario: Try to see if the discard button works
+    Given BriteERP Contacts Module Page
+    When User clicks on create button
+    And  User chooses individual option
+    And  User fills out individual page fields
+    And  User clicks on discard button
+    Then User should be able to discard the information
+
+  Scenario: Try to see if the edit button works
+    Given BriteERP Contacts Module Page
+    When User clicks on create button
+    And User chooses company option
+    And User fills out company  page fields
+    And  User clicks on save button
+    And user clicks edit button
+    And user edit what he wants
+    And User clicks on the save button
+    Then User should be able edit the page
 
 #
 #  -When user logs in Contacts Module should appear  as a forth module  in the column.
