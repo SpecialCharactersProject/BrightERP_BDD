@@ -1,9 +1,7 @@
-<<<<<<< HEAD
-Feature: Search Box Favorite, Filter and Partial Text
-=======
+
 @search
 Feature: US#SC-208 Using a search box to find contacts of users and the users' companies.
->>>>>>> 844233a7c330a4c17ba44f00d918a09598fb0510
+
 
   Scenario: Favorite Button Validation
     Given the user is on the application page
