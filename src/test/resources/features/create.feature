@@ -23,6 +23,10 @@ Feature: US#SC-214 Contact creation, editing, discarding workflow for individual
     Then User sees "new contact" displayed
 
 
+
+
+
+
 #
 #  -When user logs in Contacts Module should appear  as a forth module  in the column.
 #

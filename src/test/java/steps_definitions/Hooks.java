@@ -11,7 +11,7 @@ import utilities.Driver;
 public class Hooks {
 
     @Before
-    public  void setup(){
+    public  void setup() {
        Driver.getDriver().get("https://www.google.com");
         LoginPage loginPage = new LoginPage();
         loginPage.login();
