@@ -13,4 +13,5 @@ Feature: Import a File on Contacts Module
     When user clicks on the import button
     And user verify the Load File button displays
     And user verify the No file chosen… text on the load file input box
-    Then user should pass the path of the file on
+    And user should pass the path of the file on
+    Then user should be able to import file
