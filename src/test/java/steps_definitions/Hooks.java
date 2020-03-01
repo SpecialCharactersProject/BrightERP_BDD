@@ -15,21 +15,12 @@ public class Hooks {
         Driver.getDriver().get("https://www.google.com");
         LoginPage loginPage = new LoginPage();
         loginPage.login();
-
     }
-
-
-
-
     @After
     public void tearDown(Scenario scenario){
       if(scenario.isFailed()){
           byte [] screenshot=((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
           scenario.embed(screenshot,"image/png");
-
       }
-
-
-
     }
 }
