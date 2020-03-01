@@ -4,6 +4,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import pages.BasePage;
 import pages.ImportPage;
 import utilities.BriteERPUtil;
@@ -14,6 +15,7 @@ import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 
 public class Import_StepDefs {
+    BasePage basePage = new BasePage();
 
     ImportPage importPage = new ImportPage();
 
@@ -26,11 +28,11 @@ public class Import_StepDefs {
     @When("user verify the import button displays")
     public void user_verify_the_import_button_displays() {
         BriteERPUtil.pause(3);
-        Assert.assertTrue("Import Button did not Display",importPage.importBtn.isDisplayed());
+        Assert.assertTrue("Import Button did not Display", importPage.importBtn.isEnabled());
 
     }
 
-    @When ("user clicks on the import button")
+    @When("user clicks on the import button")
     public void user_clicks_on_the_import_button() {
         BriteERPUtil.pause(3);
         importPage.importBtn.click();
@@ -39,18 +41,18 @@ public class Import_StepDefs {
     @Then("user verify the current page title with the expected title")
     public void user_verify_the_current_page_title_with_the_expected_title() {
         BriteERPUtil.pause(3);
-        String expectedTitle= "Import a File - Odoo";
+        String expectedTitle = "Import a File - Odoo";
         Assert.assertTrue(expectedTitle.contains(Driver.getDriver().getTitle()));
 
-        Assert.assertEquals(expectedTitle,Driver.getDriver().getTitle());
+        Assert.assertEquals(expectedTitle, Driver.getDriver().getTitle());
         //try with current URL
-       // http://app.briteerp.com/web?#model=res.partner&action=import
+        // http://app.briteerp.com/web?#model=res.partner&action=import
     }
 
     @When("user verify the Load File button displays")
     public void user_verify_the_Load_File_button_displays() {
         BriteERPUtil.pause(3);
-        Assert.assertTrue("ImportLoadFile did not Display",importPage.importLoadFile.isDisplayed());
+        Assert.assertTrue("ImportLoadFile did not Display", importPage.importLoadFile.isDisplayed());
     }
 
     @When("user verify the No file chosen… text on the load file input box")
@@ -95,5 +97,62 @@ public class Import_StepDefs {
             exp.printStackTrace();
         }
 
+
+        // Below is Binny's code
     }
+
+    @When("user  click cancel button")
+    public void user_click_cancel_button() {
+        importPage.importBtn.click();
+
+
+    }
+
+    @Then("User should navigate back to import button")
+    public void user_should_navigate_back_to_import_button() {
+        BriteERPUtil.pause(3);
+        importPage.cancelButton.click();
+        BriteERPUtil.pause(5);
+
+
+    }
+
+    @Given("User is on the contact module")
+    public void user_is_on_the_contact_module() {
+        BriteERPUtil.pause(3);
+        Assert.assertTrue(true);
+    }
+
+    @When("User click import button")
+    public void user_click_import_button() {
+        BriteERPUtil.pause(5);
+        basePage.contactsButton.click();
+        importPage.importBtn.click();
+        BriteERPUtil.pause(3);
+
+    }
+
+    @When("User sees help window display")
+    public void user_sees_help_window_display() {
+        Assert.assertTrue("Help button is NOT displayed!",
+                importPage.helpButton.isDisplayed());
+
+    }
+
+    @Then("User able to navigate back to import button")
+    public void user_able_to_navigate_back_to_import_button() {
+
+        String actualHelpUrl = "https://www.odoo.com/documentation" +
+                "/user/11.0/general/base_import/import_faq.html";
+
+        String expectedHelpUrl = importPage.helpButton.getAttribute("href");
+        System.out.println(expectedHelpUrl);
+        Assert.assertTrue("Url is NOT matching!",
+                expectedHelpUrl.equals(actualHelpUrl));
+        BriteERPUtil.pause(3);
+        importPage.cancelButton.click();
+
+    }
+
 }
+
