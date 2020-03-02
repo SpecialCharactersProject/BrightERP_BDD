@@ -11,7 +11,7 @@ Feature: US#SC-214 Contact creation, editing, discarding workflow for individual
     And  User chooses individual option
     And  User fills out individual page fields
     And  User clicks on save button
-    Then User sees "new contact" displayed
+#    Then User sees "new contact" displayed
 
 
   @com
@@ -21,7 +21,26 @@ Feature: US#SC-214 Contact creation, editing, discarding workflow for individual
     And User chooses company option
     And User fills out company  page fields
     And  User clicks on save button
-    Then User sees "new contact" displayed
+#    Then User sees "new contact" displayed
+
+
+@milos1
+  Scenario: Contact Creation negative scenario for individual
+    Given BriteERP Contacts Module Page
+    When User clicks on create button
+    And  User chooses individual option
+    And  User fills out individual page fields neg scenario
+    And  User clicks on save button
+    Then User should see error message pops up.
+
+  @milos2
+  Scenario: Contact Creation negative scenario for company
+    Given BriteERP Contacts Module Page
+    When User clicks on create button
+    And  User chooses company option
+    And  User fills out company  page fields neg scenario
+    And  User clicks on save button
+    Then User should see error message pops up.
 
 
 #

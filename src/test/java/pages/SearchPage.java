@@ -11,7 +11,7 @@ import utilities.Driver;
 public class SearchPage extends BasePage {
 
 
-    public SearchPage(){
+    public SearchPage() {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 

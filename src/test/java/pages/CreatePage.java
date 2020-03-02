@@ -11,9 +11,8 @@ public class CreatePage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(xpath = "(//li/a/span)[4]")
+    @FindBy(xpath = "(//span[@class=\"oe_menu_text\"])[4]")
     public WebElement contactsModule;
-
 
     @FindBy(xpath="//button[@class='btn btn-primary btn-sm o_form_button_save']")
     public WebElement saveBtn;
@@ -99,6 +98,12 @@ public class CreatePage {
 
     @FindBy(xpath = "//button[@class='btn btn-sm btn-primary']")
     public  WebElement alert;
+
+    @FindBy(xpath = "//div[@class='o_notification_title']")
+    public WebElement errorMessage;
+
+    @FindBy(xpath = "//input[@ id = 'o_field_input_25']")
+    public WebElement companyButtonUnderInd;
 
 
 

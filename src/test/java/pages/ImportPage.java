@@ -7,7 +7,7 @@ import utilities.Driver;
 
 public class ImportPage {
 
-    public ImportPage(){
+    public ImportPage() {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 

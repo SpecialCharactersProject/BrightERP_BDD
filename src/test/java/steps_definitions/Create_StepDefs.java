@@ -6,9 +6,12 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import pages.CreatePage;
+import pages.LoginPage;
 import utilities.BriteERPUtil;
 import utilities.Driver;
 
@@ -19,6 +22,8 @@ public class Create_StepDefs { CreatePage createPage = new CreatePage();
 
     @Given("BriteERP Contacts Module Page")
     public void briteerp_Contacts_Module_Page() {
+        LoginPage login = new LoginPage();
+        login.login();
         BriteERPUtil.pause(2);
         createPage.contactsModule.click();
 
@@ -43,6 +48,7 @@ public class Create_StepDefs { CreatePage createPage = new CreatePage();
     public void user_fills_out_individual_page_fields() {
         individualName = faker.name().firstName() + " " + faker.name().lastName();
         createPage.contactName.sendKeys(individualName);
+
         BriteERPUtil.pause(1);
         Actions action = new Actions(Driver.getDriver());
         action.doubleClick(createPage.indCompanyNameBox).perform();
@@ -72,6 +78,18 @@ public class Create_StepDefs { CreatePage createPage = new CreatePage();
         BriteERPUtil.pause(1);
         createPage.ContactTitleBox.click();
         createPage.ContactTitleSelection.click();
+
+//        createPage.contactAddressStreet.sendKeys(faker.address().streetAddress());
+//        createPage.contactAddressCity.sendKeys(faker.address().cityName());
+//       createPage.contactAddressZip.sendKeys(faker.address().zipCode());
+//       createPage.jobPosition.sendKeys(faker.job().position());
+//       createPage.contactPhone.sendKeys(faker.phoneNumber().phoneNumber());
+//       createPage.contactEmail.sendKeys("thisIsFakeEmail@cybertek.com");
+
+
+
+
+
 
 
     }
@@ -162,6 +180,39 @@ public class Create_StepDefs { CreatePage createPage = new CreatePage();
     public void user_should_be_able_edit_the_page() {
         System.out.println("Test Passed");
     }
+
+    @Then("User should see error message pops up.")
+    public void user_should_see_error_message_pops_up() {
+        Assert.assertTrue("Test FAILED",createPage.errorMessage.isDisplayed());
+       BriteERPUtil.pause(2);
+    }
+
+    @When("User fills out individual page fields neg scenario")
+    public void user_fills_out_individual_page_fields_neg_scenario() {
+        createPage.contactAddressStreet.sendKeys(faker.address().streetAddress());
+        createPage.contactAddressCity.sendKeys(faker.address().cityName());
+        createPage.contactAddressZip.sendKeys(faker.address().zipCode());
+        createPage.jobPosition.sendKeys(faker.job().position());
+        createPage.contactPhone.sendKeys(faker.phoneNumber().phoneNumber());
+        createPage.contactEmail.sendKeys("thisIsFakeEmail@cybertek.com");
+    }
+
+    @When("User fills out company  page fields neg scenario")
+    public void user_fills_out_company_page_fields_neg_scenario() {
+        createPage.contactAddressStreet.sendKeys(faker.address().streetName());
+        BriteERPUtil.pause(1);
+        createPage.contactAddressCity.sendKeys(faker.address().city());
+        createPage.addressStateBox.click();
+        BriteERPUtil.pause(1);
+        createPage.companyStateSelection.click();
+        BriteERPUtil.pause(1);
+        createPage.contactAddressZip.sendKeys(faker.address().zipCode());
+        createPage.contactPhone.sendKeys(faker.phoneNumber().cellPhone());
+        createPage.contactEmail.sendKeys("vvvvv@yahoo.com");
+        createPage.contactWebsite.sendKeys("www.craxyland.com");
+    }
+
+
 
 
 }
