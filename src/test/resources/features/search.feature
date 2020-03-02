@@ -77,8 +77,8 @@ Feature: US#SC-208 Using a search box to find contacts of users and the users' c
   Scenario: Entering multiple parameters in the search box
     Given BrightERP Contacts Module Page
     When the user clicks on the search box
-    And the user enters a "Alan" and presses enter
-    And the user enters another "General Manager" and presses enter
+    And the user enters a "name" and presses enter
+    And the user enters another "position" and presses enter
     Then the user should see OR displayed between the entered parameters
   @DisplayStyle
   Scenario: Style of the contacts display
