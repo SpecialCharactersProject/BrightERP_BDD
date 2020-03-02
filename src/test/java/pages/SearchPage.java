@@ -27,7 +27,16 @@ public class SearchPage extends BasePage {
     @FindBy(xpath = "//span[@class='o_pager_value']")
     public WebElement num1_80Button;
 
-    @FindBy(xpath = "(//div[@class='btn-group o_dropdown']/button)[1]")
+
+    @FindBy(xpath = "//strong[@class='o_kanban_record_title oe_partner_heading'][1]")
+    public  WebElement enteredName;
+
+    @FindBy(xpath = "//span[@title='Advanced Search...']")     ////input[@class='o_searchview_input']
+    public WebElement searchButtonn;
+
+//    @FindBy(xpath = "(//div[@class='btn-group o_dropdown']/button)[1]")
+//    public WebElement filters;
+    @FindBy(xpath = "//button[@class='o_dropdown_toggler_btn btn btn-sm dropdown-toggle'][1]")
     public WebElement filters;
 
     @FindBy(xpath = "(//button[@class='o_dropdown_toggler_btn btn btn-sm dropdown-toggle'])[2]")
