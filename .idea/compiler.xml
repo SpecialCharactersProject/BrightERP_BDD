@@ -8,10 +8,10 @@
         <outputRelativeToContentRoot value="true" />
         <module name="BrightERP_BDD" />
         <module name="BriteERP_Cucumber" />
-        <module name="BriteERP_BDD" />
         <module name="BriteERP BDD" />
+        <module name="BriteERP_BDD" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="12" />
+    <bytecodeTargetLevel target="8" />
   </component>
 </project>
