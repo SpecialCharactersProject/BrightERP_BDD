@@ -46,3 +46,30 @@ Feature: US#SC-208 Using a search box to find contacts of users and the users' c
     When user enters another partial text
     Then user should see all the contacts that contain either of the entered characters
 
+
+    # Kani
+
+  @Dropdown
+  Scenario: Verifying dropdown menu
+
+    When User clicks on the Contacts module
+    And User clicks on the search button
+    Then User verifies three dropdown menu display
+
+  @BYoneSpecialcharacter
+  Scenario:Validation of the seach button with entering a character
+
+    When User clicks on the Contacts module
+    And User verifies search button is displayed
+    Then User types one special character into search input box
+
+  @BYname
+  Scenario: Validation of finding a contact by name
+
+    When User clicks on the Contacts module
+    And User verifies search button is displayed
+    And User clicks search input box
+    And User types a "name"
+    And User clicks on the search name for  enteredName
+    Then User verifies enteredName is displayed on the screen
+
