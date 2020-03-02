@@ -33,76 +33,83 @@ formatter.result({
 formatter.after({
   "status": "passed"
 });
-formatter.uri("src/test/resources/features/search.feature");
+formatter.uri("src/test/resources/features/create.feature");
 formatter.feature({
-  "name": "US#SC-208 Using a search box to find contacts of users and the users\u0027 companies.",
+  "name": "US#SC-214 Contact creation, editing, discarding workflow for individuals and company",
   "description": "",
   "keyword": "Feature",
   "tags": [
     {
-      "name": "@search"
+      "name": "@create"
     }
   ]
 });
 formatter.scenario({
-  "name": "Entering multiple parameters in the search box",
+  "name": "Contact Creation workflow for individual",
   "description": "",
   "keyword": "Scenario",
   "tags": [
     {
-      "name": "@search"
-    },
-    {
-      "name": "@MultipleParameters"
+      "name": "@create"
     }
   ]
 });
 formatter.step({
-  "name": "BrightERP Contacts Module Page",
+  "name": "BriteERP Contacts Module Page",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "Search_StepDefs.brighterp_Contacts_Module_Page()"
+  "location": "Create_StepDefs.briteerp_Contacts_Module_Page()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "the user clicks on the search box",
+  "name": "User clicks on create button",
   "keyword": "When "
 });
 formatter.match({
-  "location": "Search_StepDefs.the_user_clicks_on_the_search_box()"
+  "location": "Create_StepDefs.user_clicks_on_create_button()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "the user enters a \"Alan\" and presses enter",
+  "name": "User chooses individual option",
   "keyword": "And "
 });
 formatter.match({
-  "location": "Search_StepDefs.the_user_enters_a_and_presses_enter(String)"
+  "location": "Create_StepDefs.user_chooses_individual_option()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "the user enters another \"General Manager\" and presses enter",
+  "name": "User fills out individual page fields",
   "keyword": "And "
 });
 formatter.match({
-  "location": "Search_StepDefs.the_user_enters_another_and_presses_enter(String)"
+  "location": "Create_StepDefs.user_fills_out_individual_page_fields()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "the user should see OR displayed between the entered parameters",
+  "name": "User clicks on save button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Create_StepDefs.user_clicks_on_save_button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "User sees \"new contact\" individual displayed",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "Search_StepDefs.the_user_should_see_OR_displayed_between_the_entered_parameters()"
+  "location": "Create_StepDefs.user_sees_individual_displayed(String)"
 });
 formatter.result({
   "status": "passed"
@@ -111,65 +118,248 @@ formatter.after({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "Style of the contacts display",
+  "name": "Contact Creation workflow for company",
   "description": "",
   "keyword": "Scenario",
   "tags": [
     {
-      "name": "@search"
-    },
-    {
-      "name": "@DisplayStyle"
+      "name": "@create"
     }
   ]
 });
 formatter.step({
-  "name": "BrightERP Contacts Module Page",
+  "name": "BriteERP Contacts Module Page",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "Search_StepDefs.brighterp_Contacts_Module_Page()"
+  "location": "Create_StepDefs.briteerp_Contacts_Module_Page()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "the user clicks on the List button under the search box",
+  "name": "User clicks on create button",
   "keyword": "When "
 });
 formatter.match({
-  "location": "Search_StepDefs.the_user_clicks_on_the_List_button_under_the_search_box()"
+  "location": "Create_StepDefs.user_clicks_on_create_button()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "the user should be able to see contacts displayed in the List style",
+  "name": "User chooses company option",
   "keyword": "And "
 });
 formatter.match({
-  "location": "Search_StepDefs.the_user_should_be_able_to_see_contacts_displayed_in_the_List_style()"
+  "location": "Create_StepDefs.user_chooses_company_option()"
 });
 formatter.result({
-  "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//table[@class\u003d\u0027o_list_view table table-condensed table-striped o_list_view_ungrouped\u0027]\"}\n  (Session info: chrome\u003d80.0.3987.122)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027Karina-Ulanova.local\u0027, ip: \u0027fe80:0:0:0:18d6:dc02:2c0:e57d%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.14.6\u0027, java.version: \u002712.0.2\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: /var/folders/gv/3vnzdnjs5nb...}, goog:chromeOptions: {debuggerAddress: localhost:62331}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 2743d2ca16927211775e49cceeb45740\n*** Element info: {Using\u003dxpath, value\u003d//table[@class\u003d\u0027o_list_view table table-condensed table-striped o_list_view_ungrouped\u0027]}\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\n\tat com.sun.proxy.$Proxy18.isDisplayed(Unknown Source)\n\tat steps_definitions.Search_StepDefs.the_user_should_be_able_to_see_contacts_displayed_in_the_List_style(Search_StepDefs.java:55)\n\tat ✽.the user should be able to see contacts displayed in the List style(src/test/resources/features/search.feature:18)\n",
-  "status": "failed"
+  "status": "passed"
 });
 formatter.step({
-  "name": "the user clicks on the Kanban button under the search box",
+  "name": "User fills out company  page fields",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Create_StepDefs.user_fills_out_company_page_fields()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "User clicks on save button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Create_StepDefs.user_clicks_on_save_button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "User sees \"new contact\"  company displayed",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Create_StepDefs.user_sees_company_displayed(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Try to see if the edit button works",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@create"
+    }
+  ]
+});
+formatter.step({
+  "name": "BriteERP Contacts Module Page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "Create_StepDefs.briteerp_Contacts_Module_Page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "User clicks on create button",
   "keyword": "When "
 });
 formatter.match({
-  "location": "Search_StepDefs.the_user_clicks_on_the_Kanban_button_under_the_search_box()"
+  "location": "Create_StepDefs.user_clicks_on_create_button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "User chooses company option",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Create_StepDefs.user_chooses_company_option()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "User fills out company  page fields",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Create_StepDefs.user_fills_out_company_page_fields()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "User clicks on save button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Create_StepDefs.user_clicks_on_save_button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks edit button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Create_StepDefs.user_clicks_edit_button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user edit what he wants",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Create_StepDefs.user_edit_what_he_wants()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "User clicks on the save button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Create_StepDefs.user_clicks_on_the_save_button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "User should be able edit the page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Create_StepDefs.user_should_be_able_edit_the_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Try to see if the discard button works",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@create"
+    }
+  ]
+});
+formatter.step({
+  "name": "BriteERP Contacts Module Page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "Create_StepDefs.briteerp_Contacts_Module_Page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "User clicks on create button",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "Create_StepDefs.user_clicks_on_create_button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "User chooses individual option",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Create_StepDefs.user_chooses_individual_option()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "User fills out individual page fields",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Create_StepDefs.user_fills_out_individual_page_fields()"
+});
+formatter.result({
+  "error_message": "org.openqa.selenium.WebDriverException: disconnected: Unable to receive message from renderer\n  (Session info: chrome\u003d80.0.3987.122)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027VENERAs-MacBook-Pro.local\u0027, ip: \u0027fe80:0:0:0:0:27b6:5d69:17d1%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.15\u0027, java.version: \u002712.0.2\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: /var/folders/vp/bz0x1t056t5...}, goog:chromeOptions: {debuggerAddress: localhost:63923}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: d7cfbcd7ab29dfc909d8262835f41c63\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:618)\n\tat org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:639)\n\tat org.openqa.selenium.interactions.Actions.perform(Actions.java:595)\n\tat steps_definitions.Create_StepDefs.user_fills_out_individual_page_fields(Create_StepDefs.java:40)\n\tat ✽.User fills out individual page fields(src/test/resources/features/create.feature:37)\n",
+  "status": "failed"
+});
+formatter.step({
+  "name": "User clicks on discard button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Create_StepDefs.user_clicks_on_discard_button()"
 });
 formatter.result({
   "status": "skipped"
 });
 formatter.step({
-  "name": "the user should be able to see contacts displayed in the Kanban style again",
+  "name": "User should be able to discard the information",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "Search_StepDefs.the_user_should_be_able_to_see_contacts_displayed_in_the_Kanban_style_again()"
+  "location": "Create_StepDefs.user_should_be_able_to_discard_the_information()"
 });
 formatter.result({
   "status": "skipped"
@@ -179,48 +369,152 @@ formatter.after({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "Number of Contacts displayed",
+  "name": "Contact Creation negative scenario for individual",
   "description": "",
   "keyword": "Scenario",
   "tags": [
     {
-      "name": "@search"
-    },
-    {
-      "name": "@NumberOfContacts"
+      "name": "@create"
     }
   ]
 });
 formatter.step({
-  "name": "BrightERP Contacts Module Page",
+  "name": "BriteERP Contacts Module Page",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "Search_StepDefs.brighterp_Contacts_Module_Page()"
+  "location": "Create_StepDefs.briteerp_Contacts_Module_Page()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "the user clicks on the page box",
+  "name": "User clicks on create button",
   "keyword": "When "
 });
 formatter.match({
-  "location": "Search_StepDefs.the_clicks_on_the_page_box()"
+  "location": "Create_StepDefs.user_clicks_on_create_button()"
 });
 formatter.result({
-  "status": "passed"
+  "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//button[@class \u003d \u0027btn btn-primary btn-sm o-kanban-button-new btn-default\u0027]\"}\n  (Session info: chrome\u003d80.0.3987.122)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027VENERAs-MacBook-Pro.local\u0027, ip: \u0027fe80:0:0:0:0:27b6:5d69:17d1%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.15\u0027, java.version: \u002712.0.2\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: /var/folders/vp/bz0x1t056t5...}, goog:chromeOptions: {debuggerAddress: localhost:63923}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: d7cfbcd7ab29dfc909d8262835f41c63\n*** Element info: {Using\u003dxpath, value\u003d//button[@class \u003d \u0027btn btn-primary btn-sm o-kanban-button-new btn-default\u0027]}\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\n\tat com.sun.proxy.$Proxy18.isDisplayed(Unknown Source)\n\tat steps_definitions.Create_StepDefs.user_clicks_on_create_button(Create_StepDefs.java:26)\n\tat ✽.User clicks on create button(src/test/resources/features/create.feature:44)\n",
+  "status": "failed"
 });
 formatter.step({
-  "name": "the user should be able to see number of contacts contacts displayed in the box",
+  "name": "User chooses individual option",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Create_StepDefs.user_chooses_individual_option()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "User fills out individual page fields neg scenario",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Create_StepDefs.user_fills_out_individual_page_fields_neg_scenario()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "User clicks on save button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Create_StepDefs.user_clicks_on_save_button()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "User should see error message pops up.",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "Search_StepDefs.the_user_should_be_able_to_see_number_of_contacts_contacts_displayed_in_the_box()"
+  "location": "Create_StepDefs.user_should_see_error_message_pops_up()"
 });
 formatter.result({
+  "status": "skipped"
+});
+formatter.embedding("image/png", "embedded1.png");
+formatter.after({
   "status": "passed"
 });
+formatter.scenario({
+  "name": "Contact Creation negative scenario for company",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@create"
+    }
+  ]
+});
+formatter.step({
+  "name": "BriteERP Contacts Module Page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "Create_StepDefs.briteerp_Contacts_Module_Page()"
+});
+formatter.result({
+  "error_message": "org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element \u003cspan class\u003d\"oe_menu_text\"\u003e...\u003c/span\u003e is not clickable at point (240, 16). Other element would receive the click: \u003cdiv tabindex\u003d\"-1\" data-backdrop\u003d\"static\" role\u003d\"dialog\" aria-hidden\u003d\"false\" class\u003d\"modal o_technical_modal in\" id\u003d\"modal_1836\" style\u003d\"display: block;\"\u003e...\u003c/div\u003e\n  (Session info: chrome\u003d80.0.3987.122)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027VENERAs-MacBook-Pro.local\u0027, ip: \u0027fe80:0:0:0:0:27b6:5d69:17d1%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.15\u0027, java.version: \u002712.0.2\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: /var/folders/vp/bz0x1t056t5...}, goog:chromeOptions: {debuggerAddress: localhost:63923}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: d7cfbcd7ab29dfc909d8262835f41c63\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)\n\tat org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)\n\tat jdk.internal.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:567)\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)\n\tat com.sun.proxy.$Proxy18.click(Unknown Source)\n\tat steps_definitions.Create_StepDefs.briteerp_Contacts_Module_Page(Create_StepDefs.java:21)\n\tat ✽.BriteERP Contacts Module Page(src/test/resources/features/create.feature:51)\n",
+  "status": "failed"
+});
+formatter.step({
+  "name": "User clicks on create button",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "Create_StepDefs.user_clicks_on_create_button()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "User chooses company option",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Create_StepDefs.user_chooses_company_option()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "User fills out company  page fields neg scenario",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Create_StepDefs.user_fills_out_company_page_fields_neg_scenario()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "User clicks on save button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Create_StepDefs.user_clicks_on_save_button()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "User should see error message pops up.",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Create_StepDefs.user_should_see_error_message_pops_up()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.embedding("image/png", "embedded2.png");
 formatter.after({
   "status": "passed"
 });
