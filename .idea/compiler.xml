@@ -12,6 +12,6 @@
         <module name="BriteERP BDD" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="12" />
+    <bytecodeTargetLevel target="8" />
   </component>
 </project>
