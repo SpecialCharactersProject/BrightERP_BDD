@@ -1,5 +1,7 @@
 @create
+
 Feature: US#SC-214 Contact creation, editing, discarding workflow for individuals and company
+
 
   Scenario: Contact Creation workflow for individual
     Given BriteERP Contacts Module Page
@@ -7,7 +9,7 @@ Feature: US#SC-214 Contact creation, editing, discarding workflow for individual
     And  User chooses individual option
     And  User fills out individual page fields
     And  User clicks on save button
-    Then User sees "new contact " individual displayed
+    Then User sees "new contact" individual displayed
 
   Scenario: Contact Creation workflow for company
     Given BriteERP Contacts Module Page
@@ -15,16 +17,7 @@ Feature: US#SC-214 Contact creation, editing, discarding workflow for individual
     And User chooses company option
     And User fills out company  page fields
     And  User clicks on save button
-    Then User sees "new contact " company displayed
-
-
-  Scenario: Try to see if the discard button works
-    Given BriteERP Contacts Module Page
-    When User clicks on create button
-    And  User chooses individual option
-    And  User fills out individual page fields
-    And  User clicks on discard button
-    Then User should be able to discard the information
+    Then User sees "new contact"  company displayed
 
   Scenario: Try to see if the edit button works
     Given BriteERP Contacts Module Page
@@ -36,6 +29,32 @@ Feature: US#SC-214 Contact creation, editing, discarding workflow for individual
     And user edit what he wants
     And User clicks on the save button
     Then User should be able edit the page
+
+  Scenario: Try to see if the discard button works
+    Given BriteERP Contacts Module Page
+    When User clicks on create button
+    And  User chooses individual option
+    And  User fills out individual page fields
+    And  User clicks on discard button
+    Then User should be able to discard the information
+
+
+  Scenario: Contact Creation negative scenario for individual
+    Given BriteERP Contacts Module Page
+    When User clicks on create button
+    And  User chooses individual option
+    And  User fills out individual page fields neg scenario
+    And  User clicks on save button
+    Then User should see error message pops up.
+
+  Scenario: Contact Creation negative scenario for company
+    Given BriteERP Contacts Module Page
+    When User clicks on create button
+    And  User chooses company option
+    And  User fills out company  page fields neg scenario
+    And  User clicks on save button
+    Then User should see error message pops up.
+
 
 #
 #  -When user logs in Contacts Module should appear  as a forth module  in the column.
