@@ -1,27 +1,83 @@
 package steps_definitions;
 
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import cucumber.api.java.eo.Se;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import pages.BasePage;
 import pages.LoginPage;
 import pages.SearchPage;
 import utilities.BriteERPUtil;
 import utilities.Driver;
 
+import java.util.List;
+
 public class Search_StepDefs {
 
     SearchPage searchPage = new SearchPage();
 
 
-    //Entering multiple parameters in the search box
+    //LogIn and clicking on Contacts module
     @Given("BrightERP Contacts Module Page")
     public void brighterp_Contacts_Module_Page() {
+        BriteERPUtil.pause(2);
         searchPage.contactsButton.click();
+        BriteERPUtil.pause(5);
     }
+
+    // partial text validation test scenario
+    @When("user enters {string} for a new search")
+    public void user_enters_for_a_new_search(String string) {
+        searchPage.searchInputBox.sendKeys("ad"+ Keys.ENTER);
+        BriteERPUtil.pause(5);
+    }
+    @Then("user should see all the contacts which have the entered characters in the list")
+    public void user_should_see_all_the_contacts_which_have_the_entered_characters_in_the_list() {
+        List<WebElement> names = Driver.getDriver().findElements(By.xpath("//div[@class='o_kanban_view o_res_partner_kanban o_kanban_ungrouped']"));
+        for (WebElement listName : names) {
+            String actualName = listName.getText();
+            Assert.assertTrue(actualName.contains("ad"));
+        }
+    }
+    //favorite button validation scenario
+    @When("user clicks on Favorites")
+    public void user_clicks_on_Favorites() {
+        searchPage.searchBoxPlusButton.click();
+        searchPage.favoritesButton.click();
+    }
+    @And("user clicks on Add to my dashboard")
+    public void user_clicks_on_Add_to_my_dashboard() {
+        searchPage.addToMyDashboard.click();
+        searchPage.addToDashboardInputBox.clear();
+        searchPage.addToDashboardInputBox.sendKeys("Contacts");
+    }
+    @Then("user should be able to add the search to the dashboard for future use under Dashboard module")
+    public void user_should_be_able_to_add_the_search_to_the_dashboard_for_future_use_under_Dashboard_module() {
+        searchPage.addToDashboardButton.click();
+        Assert.assertTrue(searchPage.popUpDisplayText.isDisplayed());
+    }
+    //filter button validation scenario
+    @When("user clicks on filter button")
+    public void userClicksOnFilterButton() {
+        searchPage.contactsButton.click();
+        BriteERPUtil.pause(2);
+        searchPage.filterSearchButton.click();
+        searchPage.dropDownList.click();
+    }
+    @When("user clicks on one of the options")
+    public void user_clicks_on_one_of_the_options() {
+        searchPage.searchedSecondValue.click();
+    }
+    @Then("user should see only the filtered contacts")
+    public void user_should_see_only_the_filtered_contacts() {
+        Assert.assertTrue(searchPage.searchedValue.isDisplayed()&&searchPage.searchedSecondValue.isDisplayed());
+    }
+
 
     @When("the user clicks on the search box")
     public void the_user_clicks_on_the_search_box() {
@@ -31,6 +87,7 @@ public class Search_StepDefs {
     @When("the user enters a {string} and presses enter")
     public void the_user_enters_a_and_presses_enter(String string) {
         searchPage.searchInputBox.sendKeys(string + Keys.ENTER);
+        BriteERPUtil.pause(3);
 
 
     }
@@ -38,6 +95,7 @@ public class Search_StepDefs {
     @When("the user enters another {string} and presses enter")
     public void the_user_enters_another_and_presses_enter(String string) {
         searchPage.searchInputBox.sendKeys(string + Keys.ENTER);
+        BriteERPUtil.pause(2);
 
     }
 
@@ -50,7 +108,7 @@ public class Search_StepDefs {
     @When("the user clicks on the List button under the search box")
     public void the_user_clicks_on_the_List_button_under_the_search_box() {
         searchPage.listButton.click();
-        BriteERPUtil.pause(3);
+        BriteERPUtil.pause(4);
     }
 
     @When("the user should be able to see contacts displayed in the List style")
@@ -61,7 +119,7 @@ public class Search_StepDefs {
     @When("the user clicks on the Kanban button under the search box")
     public void the_user_clicks_on_the_Kanban_button_under_the_search_box() {
         searchPage.kanbanButton.click();
-        BriteERPUtil.pause(3);
+        BriteERPUtil.pause(4);
     }
 
     @Then("the user should be able to see contacts displayed in the Kanban style again")
