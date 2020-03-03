@@ -2,52 +2,28 @@
 @search
 Feature: US#SC-208 Using a search box to find contacts of users and the users' companies.
 
-
-  Scenario: Favorite Button Validation
-    Given the user is on the application page
-    When the user puts username and password
-    Then user should be able to log in to the application page.
-    When user clicks on contacts
-    Then user should see contact module script in white
-    When user clicks on Favorites
-    Then user should see two submodules underneath Save Current Search and Add to my Dashboard
-    When user clicks on save current search
-    Then user should be able to save the search.
-    And  user should also have the options to save either Use by default or Share with other users
-    When user clicks on Add to my dasbhoard
-    Then user should be able to add the search to the dashboard for future use under Dashboard module
-
-
-   Scenario: Filter Button Validation
-     Given the user is on the application page
-     When the user puts username and password
-     Then user should be able to log in to the application page.
-     When user clicks on contacts
-     Then user should see contact module script in white
-     When user clicks on Favorites
-     When user clicks on plust button in search box
-     Then user should see three modules underneath searchbox
-     When user clicks on filter
-     Then dropdown menu opens
-     And user should see preset filters
-     When use click on one of the options
-     Then user should see only the filtered contacts
-     When user clicks on more than one preset option to filter
-     Then user should see contacts filltered by all options
-
-  Scenario: Favorite Button Validation
-    Given the user is on the application page
-    When the user puts username and password
-    Then user should be able to log in to the application page.
-    When user clicks on contacts
-    Then user should see contact module script in white
-    When user enters partial text for a new search
+#Sercan
+  @skytester
+  Scenario: Partial text search validation
+    Given BrightERP Contacts Module Page
+    When user enters "partial text" for a new search
     Then user should see all the contacts which have the entered characters in the list
-    When user enters another partial text
-    Then user should see all the contacts that contain either of the entered characters
+
+  @skytester
+  Scenario: Favorite Button Validation
+    Given BrightERP Contacts Module Page
+    When user clicks on Favorites
+    And user clicks on Add to my dashboard
+    Then user should be able to add the search to the dashboard for future use under Dashboard module
+  @skytester
+  Scenario: Filter Button Validation
+    Given BrightERP Contacts Module Page
+    When user clicks on filter button
+    And user clicks on one of the options
+    Then user should see only the filtered contacts
 
 
-    # Kani
+    #Kani
 
   @Dropdown
   Scenario: Verifying dropdown menu
@@ -73,12 +49,14 @@ Feature: US#SC-208 Using a search box to find contacts of users and the users' c
     And User clicks on the search name for  enteredName
     Then User verifies enteredName is displayed on the screen
 
+#Karina
+
   @MultipleParameters
   Scenario: Entering multiple parameters in the search box
     Given BrightERP Contacts Module Page
     When the user clicks on the search box
-    And the user enters a "Alan" and presses enter
-    And the user enters another "General Manager" and presses enter
+    And the user enters a "name" and presses enter
+    And the user enters another "position" and presses enter
     Then the user should see OR displayed between the entered parameters
   @DisplayStyle
   Scenario: Style of the contacts display
