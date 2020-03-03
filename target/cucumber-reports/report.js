@@ -20,9 +20,6 @@ formatter.scenario({
     }
   ]
 });
-formatter.before({
-  "status": "passed"
-});
 formatter.step({
   "name": "Landing page of BriteERP",
   "keyword": "Given "
@@ -56,9 +53,6 @@ formatter.scenario({
       "name": "@create"
     }
   ]
-});
-formatter.before({
-  "status": "passed"
 });
 formatter.step({
   "name": "BriteERP Contacts Module Page",
@@ -133,9 +127,6 @@ formatter.scenario({
     }
   ]
 });
-formatter.before({
-  "status": "passed"
-});
 formatter.step({
   "name": "BriteERP Contacts Module Page",
   "keyword": "Given "
@@ -208,9 +199,6 @@ formatter.scenario({
       "name": "@create"
     }
   ]
-});
-formatter.before({
-  "status": "passed"
 });
 formatter.step({
   "name": "BriteERP Contacts Module Page",
@@ -315,9 +303,6 @@ formatter.scenario({
     }
   ]
 });
-formatter.before({
-  "status": "passed"
-});
 formatter.step({
   "name": "BriteERP Contacts Module Page",
   "keyword": "Given "
@@ -336,8 +321,7 @@ formatter.match({
   "location": "Create_StepDefs.user_clicks_on_create_button()"
 });
 formatter.result({
-  "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//button[@class \u003d \u0027btn btn-primary btn-sm o-kanban-button-new btn-default\u0027]\"}\n  (Session info: chrome\u003d80.0.3987.122)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027milos-MacBook-Pro.local\u0027, ip: \u00272601:241:480:dd20:0:0:0:a95b%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.14.5\u0027, java.version: \u002712.0.2\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: /var/folders/ss/ycwnbjls38v...}, goog:chromeOptions: {debuggerAddress: localhost:51630}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 33841f86dd12cb0b04a5b0a682298096\n*** Element info: {Using\u003dxpath, value\u003d//button[@class \u003d \u0027btn btn-primary btn-sm o-kanban-button-new btn-default\u0027]}\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\n\tat com.sun.proxy.$Proxy19.isDisplayed(Unknown Source)\n\tat steps_definitions.Create_StepDefs.user_clicks_on_create_button(Create_StepDefs.java:26)\n\tat ✽.User clicks on create button(src/test/resources/features/create.feature:35)\n",
-  "status": "failed"
+  "status": "passed"
 });
 formatter.step({
   "name": "User chooses individual option",
@@ -347,7 +331,7 @@ formatter.match({
   "location": "Create_StepDefs.user_chooses_individual_option()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "User fills out individual page fields",
@@ -357,7 +341,7 @@ formatter.match({
   "location": "Create_StepDefs.user_fills_out_individual_page_fields()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "User clicks on discard button",
@@ -367,7 +351,7 @@ formatter.match({
   "location": "Create_StepDefs.user_clicks_on_discard_button()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "User should be able to discard the information",
@@ -377,9 +361,8 @@ formatter.match({
   "location": "Create_StepDefs.user_should_be_able_to_discard_the_information()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
-formatter.embedding("image/png", "embedded0.png");
 formatter.after({
   "status": "passed"
 });
@@ -392,9 +375,6 @@ formatter.scenario({
       "name": "@create"
     }
   ]
-});
-formatter.before({
-  "status": "passed"
 });
 formatter.step({
   "name": "BriteERP Contacts Module Page",
@@ -469,9 +449,6 @@ formatter.scenario({
     }
   ]
 });
-formatter.before({
-  "status": "passed"
-});
 formatter.step({
   "name": "BriteERP Contacts Module Page",
   "keyword": "Given "
@@ -490,7 +467,8 @@ formatter.match({
   "location": "Create_StepDefs.user_clicks_on_create_button()"
 });
 formatter.result({
-  "status": "passed"
+  "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//button[@class \u003d \u0027btn btn-primary btn-sm o-kanban-button-new btn-default\u0027]\"}\n  (Session info: chrome\u003d80.0.3987.122)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027milos-MacBook-Pro.local\u0027, ip: \u00272603:300a:16aa:1000:0:0:0:9b17%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.14.5\u0027, java.version: \u002712.0.2\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: /var/folders/ss/ycwnbjls38v...}, goog:chromeOptions: {debuggerAddress: localhost:49492}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 8eaa08becb48483ce35fb970217091e4\n*** Element info: {Using\u003dxpath, value\u003d//button[@class \u003d \u0027btn btn-primary btn-sm o-kanban-button-new btn-default\u0027]}\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\n\tat com.sun.proxy.$Proxy18.isDisplayed(Unknown Source)\n\tat steps_definitions.Create_StepDefs.user_clicks_on_create_button(Create_StepDefs.java:26)\n\tat ✽.User clicks on create button(src/test/resources/features/create.feature:52)\n",
+  "status": "failed"
 });
 formatter.step({
   "name": "User chooses company option",
@@ -500,7 +478,7 @@ formatter.match({
   "location": "Create_StepDefs.user_chooses_company_option()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "User fills out company  page fields neg scenario",
@@ -510,7 +488,7 @@ formatter.match({
   "location": "Create_StepDefs.user_fills_out_company_page_fields_neg_scenario()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "User clicks on save button",
@@ -520,7 +498,7 @@ formatter.match({
   "location": "Create_StepDefs.user_clicks_on_save_button()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "User should see error message pops up.",
@@ -530,8 +508,9 @@ formatter.match({
   "location": "Create_StepDefs.user_should_see_error_message_pops_up()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
+formatter.embedding("image/png", "embedded0.png");
 formatter.after({
   "status": "passed"
 });

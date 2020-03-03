@@ -9,7 +9,7 @@ public class Login_StepDefs {
 
     @Given("Landing page of BriteERP")
     public void landing_page_of_BriteERP() {
-            LoginPage loginPage = new LoginPage();
+        LoginPage loginPage = new LoginPage();
         loginPage.login();
 
 
