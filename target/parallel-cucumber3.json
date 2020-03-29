@@ -1,0 +1,387 @@
+[
+  {
+    "line": 3,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 10214247590,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setup()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Verifying the import button",
+        "description": "",
+        "id": "import-a-file-on-contacts-module;verifying-the-import-button",
+        "after": [
+          {
+            "result": {
+              "duration": 77177,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3191532145,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user is on the contacts module",
+            "match": {
+              "location": "Import_StepDefs.user_is_on_the_contacts_module()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3036710786,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user verify the import button displays",
+            "match": {
+              "location": "Import_StepDefs.user_verify_the_import_button_displays()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3105325902,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user clicks on the import button",
+            "match": {
+              "location": "Import_StepDefs.user_clicks_on_the_import_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3014271737,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user verify the current page title with the expected title",
+            "match": {
+              "location": "Import_StepDefs.user_verify_the_current_page_title_with_the_expected_title()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ImportFile"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 2925676073,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setup()"
+            }
+          }
+        ],
+        "line": 10,
+        "name": ": Validation of load file button",
+        "description": "",
+        "id": "import-a-file-on-contacts-module;:-validation-of-load-file-button",
+        "after": [
+          {
+            "result": {
+              "duration": 51248,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3135319422,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "user is on the contacts module",
+            "match": {
+              "location": "Import_StepDefs.user_is_on_the_contacts_module()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3167966232,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "user clicks on the import button",
+            "match": {
+              "location": "Import_StepDefs.user_clicks_on_the_import_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3123055875,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "user verify the Load File button displays",
+            "match": {
+              "location": "Import_StepDefs.user_verify_the_Load_File_button_displays()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 32871170,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "user verify the No file chosen… text on the load file input box",
+            "match": {
+              "location": "Import_StepDefs.user_verify_the_No_file_chosen_text_on_the_load_file_input_box()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "cucumber.api.PendingException: TODO: implement me\n\tat steps_definitions.Import_StepDefs.user_should_pass_the_path_of_the_file_on(Import_StepDefs.java:68)\n\tat ✽.user should pass the path of the file on(src/test/resources/features/import.feature:15)\n",
+              "duration": 679814546,
+              "status": "pending"
+            },
+            "line": 15,
+            "name": "user should pass the path of the file on",
+            "match": {
+              "location": "Import_StepDefs.user_should_pass_the_path_of_the_file_on()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 21893,
+              "status": "skipped"
+            },
+            "line": 16,
+            "name": "user should be able to import file",
+            "match": {
+              "location": "Import_StepDefs.user_should_be_able_to_import_file()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ImportFile"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 1655678437,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setup()"
+            }
+          }
+        ],
+        "line": 19,
+        "name": "Validation of the cancel button",
+        "description": "",
+        "id": "import-a-file-on-contacts-module;validation-of-the-cancel-button",
+        "after": [
+          {
+            "result": {
+              "duration": 43251,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3098988852,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "user is on the contacts module",
+            "match": {
+              "location": "Import_StepDefs.user_is_on_the_contacts_module()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3128418931,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "user clicks on the import button",
+            "match": {
+              "location": "Import_StepDefs.user_clicks_on_the_import_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 147664117,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "user  click cancel button",
+            "match": {
+              "location": "Import_StepDefs.user_click_cancel_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 8116462505,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "User should navigate back to import button",
+            "match": {
+              "location": "Import_StepDefs.user_should_navigate_back_to_import_button()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ImportFile"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 1330913379,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setup()"
+            }
+          }
+        ],
+        "line": 26,
+        "name": "Validation of the help button",
+        "description": "",
+        "id": "import-a-file-on-contacts-module;validation-of-the-help-button",
+        "after": [
+          {
+            "result": {
+              "duration": 48343,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3001459288,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "User is on the contact module",
+            "match": {
+              "location": "Import_StepDefs.user_is_on_the_contact_module()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 10276647295,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "User click import button",
+            "match": {
+              "location": "Import_StepDefs.user_click_import_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 35735783,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "User sees help window display",
+            "match": {
+              "location": "Import_StepDefs.user_sees_help_window_display()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3117345154,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "User able to navigate back to import button",
+            "match": {
+              "location": "Import_StepDefs.user_able_to_navigate_back_to_import_button()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ImportFile"
+          }
+        ]
+      }
+    ],
+    "name": "Import a File on Contacts Module",
+    "description": "",
+    "id": "import-a-file-on-contacts-module",
+    "keyword": "Feature",
+    "uri": "src/test/resources/features/import.feature",
+    "tags": [
+      {
+        "name": "@ImportFile",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

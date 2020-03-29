@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: Import a File on Contacts Module
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 69.554 s - in Import a File on Contacts Module

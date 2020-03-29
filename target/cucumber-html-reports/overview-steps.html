@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+              <th>Number</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Cucumber HTML Reports</td>
+              <td>1</td>
+            <td>26 Mar 2020, 13:46</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+          <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+      </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+                      <tr>
+              <td class="location">Create_StepDefs.briteerp_Contacts_Module_Page()</td>
+              <td>6</td>
+              <td class="duration" data-value="7132259691">7.132</td>
+              <td class="duration" data-value="7132259691">17.152</td>
+              <td class="duration" data-value="42793558146">42.793</td>
+              <td class="failed">66.67%</td>
+            </tr>
+                      <tr>
+              <td class="location">Create_StepDefs.user_chooses_company_option()</td>
+              <td>3</td>
+              <td class="duration" data-value="1955569060">1.955</td>
+              <td class="duration" data-value="1955569060">3.161</td>
+              <td class="duration" data-value="5866707181">5.866</td>
+              <td class="failed">66.67%</td>
+            </tr>
+                      <tr>
+              <td class="location">Create_StepDefs.user_chooses_individual_option()</td>
+              <td>3</td>
+              <td class="duration" data-value="2187864942">2.187</td>
+              <td class="duration" data-value="2187864942">3.502</td>
+              <td class="duration" data-value="6563594828">6.563</td>
+              <td class="failed">66.67%</td>
+            </tr>
+                      <tr>
+              <td class="location">Create_StepDefs.user_clicks_edit_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="1076477418">1.076</td>
+              <td class="duration" data-value="1076477418">1.076</td>
+              <td class="duration" data-value="1076477418">1.076</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Create_StepDefs.user_clicks_on_create_button()</td>
+              <td>6</td>
+              <td class="duration" data-value="3435410785">3.435</td>
+              <td class="duration" data-value="3435410785">5.245</td>
+              <td class="duration" data-value="20612464714">20.612</td>
+              <td class="failed">66.67%</td>
+            </tr>
+                      <tr>
+              <td class="location">Create_StepDefs.user_clicks_on_discard_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="285215047">0.285</td>
+              <td class="duration" data-value="285215047">0.285</td>
+              <td class="duration" data-value="285215047">0.285</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Create_StepDefs.user_clicks_on_save_button()</td>
+              <td>5</td>
+              <td class="duration" data-value="1872635614">1.872</td>
+              <td class="duration" data-value="1872635614">3.163</td>
+              <td class="duration" data-value="9363178073">9.363</td>
+              <td class="failed">60.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Create_StepDefs.user_clicks_on_the_save_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="57350044">0.057</td>
+              <td class="duration" data-value="57350044">0.057</td>
+              <td class="duration" data-value="57350044">0.057</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Create_StepDefs.user_edit_what_he_wants()</td>
+              <td>1</td>
+              <td class="duration" data-value="226394565">0.226</td>
+              <td class="duration" data-value="226394565">0.226</td>
+              <td class="duration" data-value="226394565">0.226</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Create_StepDefs.user_fills_out_company_page_fields()</td>
+              <td>2</td>
+              <td class="duration" data-value="7168688896">7.168</td>
+              <td class="duration" data-value="7168688896">7.471</td>
+              <td class="duration" data-value="14337377792">14.337</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Create_StepDefs.user_fills_out_company_page_fields_neg_scenario()</td>
+              <td>1</td>
+              <td class="duration" data-value="4575">0.000</td>
+              <td class="duration" data-value="4575">0.000</td>
+              <td class="duration" data-value="4575">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Create_StepDefs.user_fills_out_individual_page_fields()</td>
+              <td>2</td>
+              <td class="duration" data-value="23277206627">23.277</td>
+              <td class="duration" data-value="23277206627">28.929</td>
+              <td class="duration" data-value="46554413254">46.554</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Create_StepDefs.user_fills_out_individual_page_fields_neg_scenario()</td>
+              <td>1</td>
+              <td class="duration" data-value="4013">0.000</td>
+              <td class="duration" data-value="4013">0.000</td>
+              <td class="duration" data-value="4013">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Create_StepDefs.user_sees_company_displayed(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="3007661513">3.007</td>
+              <td class="duration" data-value="3007661513">3.007</td>
+              <td class="duration" data-value="3007661513">3.007</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Create_StepDefs.user_sees_individual_displayed(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="3014127248">3.014</td>
+              <td class="duration" data-value="3014127248">3.014</td>
+              <td class="duration" data-value="3014127248">3.014</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Create_StepDefs.user_should_be_able_edit_the_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="68286">0.000</td>
+              <td class="duration" data-value="68286">0.000</td>
+              <td class="duration" data-value="68286">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Create_StepDefs.user_should_be_able_to_discard_the_information()</td>
+              <td>1</td>
+              <td class="duration" data-value="209985">0.000</td>
+              <td class="duration" data-value="209985">0.000</td>
+              <td class="duration" data-value="209985">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Create_StepDefs.user_should_see_error_message_pops_up()</td>
+              <td>2</td>
+              <td class="duration" data-value="4110">0.000</td>
+              <td class="duration" data-value="4110">0.000</td>
+              <td class="duration" data-value="8220">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Hooks.setup()</td>
+              <td>10</td>
+              <td class="duration" data-value="3384971189">3.384</td>
+              <td class="duration" data-value="3384971189">10.214</td>
+              <td class="duration" data-value="33849711894">33.849</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Hooks.tearDown(Scenario)</td>
+              <td>10</td>
+              <td class="duration" data-value="63469370">0.063</td>
+              <td class="duration" data-value="63469370">0.327</td>
+              <td class="duration" data-value="634693703">0.634</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Import_StepDefs.user_able_to_navigate_back_to_import_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="3117345154">3.117</td>
+              <td class="duration" data-value="3117345154">3.117</td>
+              <td class="duration" data-value="3117345154">3.117</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Import_StepDefs.user_click_cancel_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="147664117">0.147</td>
+              <td class="duration" data-value="147664117">0.147</td>
+              <td class="duration" data-value="147664117">0.147</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Import_StepDefs.user_click_import_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="10276647295">10.276</td>
+              <td class="duration" data-value="10276647295">10.276</td>
+              <td class="duration" data-value="10276647295">10.276</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Import_StepDefs.user_clicks_on_the_import_button()</td>
+              <td>3</td>
+              <td class="duration" data-value="3133903688">3.133</td>
+              <td class="duration" data-value="3133903688">3.167</td>
+              <td class="duration" data-value="9401711065">9.401</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Import_StepDefs.user_is_on_the_contact_module()</td>
+              <td>1</td>
+              <td class="duration" data-value="3001459288">3.001</td>
+              <td class="duration" data-value="3001459288">3.001</td>
+              <td class="duration" data-value="3001459288">3.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Import_StepDefs.user_is_on_the_contacts_module()</td>
+              <td>3</td>
+              <td class="duration" data-value="3141946806">3.141</td>
+              <td class="duration" data-value="3141946806">3.191</td>
+              <td class="duration" data-value="9425840419">9.425</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Import_StepDefs.user_sees_help_window_display()</td>
+              <td>1</td>
+              <td class="duration" data-value="35735783">0.035</td>
+              <td class="duration" data-value="35735783">0.035</td>
+              <td class="duration" data-value="35735783">0.035</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Import_StepDefs.user_should_be_able_to_import_file()</td>
+              <td>1</td>
+              <td class="duration" data-value="21893">0.000</td>
+              <td class="duration" data-value="21893">0.000</td>
+              <td class="duration" data-value="21893">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Import_StepDefs.user_should_navigate_back_to_import_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="8116462505">8.116</td>
+              <td class="duration" data-value="8116462505">8.116</td>
+              <td class="duration" data-value="8116462505">8.116</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Import_StepDefs.user_should_pass_the_path_of_the_file_on()</td>
+              <td>1</td>
+              <td class="duration" data-value="679814546">0.679</td>
+              <td class="duration" data-value="679814546">0.679</td>
+              <td class="duration" data-value="679814546">0.679</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Import_StepDefs.user_verify_the_Load_File_button_displays()</td>
+              <td>1</td>
+              <td class="duration" data-value="3123055875">3.123</td>
+              <td class="duration" data-value="3123055875">3.123</td>
+              <td class="duration" data-value="3123055875">3.123</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Import_StepDefs.user_verify_the_No_file_chosen_text_on_the_load_file_input_box()</td>
+              <td>1</td>
+              <td class="duration" data-value="32871170">0.032</td>
+              <td class="duration" data-value="32871170">0.032</td>
+              <td class="duration" data-value="32871170">0.032</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Import_StepDefs.user_verify_the_current_page_title_with_the_expected_title()</td>
+              <td>1</td>
+              <td class="duration" data-value="3014271737">3.014</td>
+              <td class="duration" data-value="3014271737">3.014</td>
+              <td class="duration" data-value="3014271737">3.014</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Import_StepDefs.user_verify_the_import_button_displays()</td>
+              <td>1</td>
+              <td class="duration" data-value="3036710786">3.036</td>
+              <td class="duration" data-value="3036710786">3.036</td>
+              <td class="duration" data-value="3036710786">3.036</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                  </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>34</td>
+            <td>77</td>
+            <td class="duration">3.138</td>
+            <td class="duration">46.554</td>
+            <td class="duration">4:1.652</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
