@@ -114,7 +114,7 @@ public class JavaTasksVjezbanje {
 
         System.out.println(Arrays.toString(returnArray2222(arr,"ojha",1)));
 
-        System.out.println("AAAAAA");
+        System.out.println("AAAAAAEEEEEEEEEEEEE");
 
     }
 
