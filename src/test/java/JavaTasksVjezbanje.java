@@ -8,6 +8,8 @@ public class JavaTasksVjezbanje {
 
     public static void main(String[] args) {
 
+        System.out.println("aaa");
+
 //        String word = "Java";
 //        String word2 = "Java";
 //        System.out.println( word.compareTo(word2));
