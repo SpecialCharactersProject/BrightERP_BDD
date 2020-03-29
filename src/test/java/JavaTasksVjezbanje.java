@@ -10,6 +10,8 @@ public class JavaTasksVjezbanje {
 
         System.out.println("aaa");
 
+        System.out.println("bbbbbbbbbb");
+
 //        String word = "Java";
 //        String word2 = "Java";
 //        System.out.println( word.compareTo(word2));
