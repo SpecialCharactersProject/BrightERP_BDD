@@ -1,3 +1,4 @@
+import javax.swing.plaf.synth.SynthOptionPaneUI;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -113,6 +114,7 @@ public class JavaTasksVjezbanje {
 
         System.out.println(Arrays.toString(returnArray2222(arr,"ojha",1)));
 
+        System.out.println("AAAAAA");
 
     }
 
@@ -133,6 +135,9 @@ public class JavaTasksVjezbanje {
         bbb[index] = word;
 
         return bbb;
+
+
+
     }
 
 
